@@ -11,6 +11,13 @@ function getDogs(num) {
 function displayDogs(y, num) {
     //This displays the resulting images by adjusting the DOM with the new info
     console.log(y);
+    $('.results').removeClass('hidden');
+    for (let i = 0; i < num; i ++) {
+        $('.results-img').append(
+            `<img src="${y.message[i]}" alt="dog picture">`
+        );
+    };
+
 };
 
 function formSubmit() {
