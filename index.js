@@ -24,6 +24,7 @@ function formSubmit() {
     //this function watches for a user submitting the form and passes the results to the GET function
     $('form').submit(event => {
         event.preventDefault();
+        $('.results-img').html('');
         let userNum = $('#num-dogs').val();
         getDogs(userNum);
     });
